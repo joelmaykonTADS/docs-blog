@@ -6,6 +6,8 @@ backend:
 # These lines should *not* be indented
 media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
+search: true
+
 
 collections:
 - name: blog
@@ -34,6 +36,29 @@ collections:
 - name: docs
   label: "doc"
   folder: docs
+  identifier_field: title
+  extension: md
+  widget: "list"
+  create: true
+  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields:
+    - { name: title, label: Title, widget: string }
+    - { name: body, label: Body, widget: markdown }
+    - { name: slug, label: Slug, widget: string }
+    - label: "Tags"
+      name: "tags"
+      widget: "list"
+    - label: "Authors"
+      name: "authors" 
+      widget: "list"
+      fields:
+        - { name: name, label: Name, widget: string }
+        - { name: title, label: Title, widget: string } 
+        - { name: url, label: URL, widget: string } 
+        - { name: imageUrl, label: ImageURL, widget: string }
+- name: Python
+  label: "doc"
+  folder: docs/python
   identifier_field: title
   extension: md
   widget: "list"
