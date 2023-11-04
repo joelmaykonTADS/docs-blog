@@ -31,7 +31,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'pt-br'],
   },
 
   presets: [
@@ -44,14 +44,16 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/joelmaykonTADS/docs-blog/',
         },
         blog: {
+          blogSidebarTitle: 'Todos posts',
+          blogSidebarCount: 'ALL',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/joelmaykonTADS/docs-blog/',
         },
         theme: {
           customCss: './src/css/custom.css',
